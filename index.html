@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payoo</title>
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
+
+    <!-- tailwindcss+daisy CDN -->
+     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+     <!-- font Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- icons -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            font-family: "Manrope", sans-serif;
+        }
+    </style>
+
+</head >
+<body class="min-h-screen max-w-md bg-base-200 mx-auto">
+    <div class="logo w-[200px] mx-auto pt-32 ">
+        <img src="assets/Logo-full.png" alt="">
+    </div>
+
+    <!-- form  -->
+     <div class="form rounded-full pt-4  mt-10">
+        <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow mx-auto rounded-2xl">
+      <div class="card-body ">
+        <fieldset class="fieldset">
+          <label class="label text-neutral font-bold">Mobile Number</label>
+          <input id="input-number" minlength="11" maxlength="11" type="tel" class="input rounded-full bg-base-200  " value="01828347761" placeholder="Enter your number" />
+          <label class="label text-neutral font-bold">4 Digit Pin</label>
+          <input id="input-pin" minlength="4" maxlength="4" type="password" class="input rounded-full bg-base-200" placeholder="Enter 4 Digit Pin" />
+          
+          <button id="login-btn" class="btn btn-primary rounded-full">Login</button>
+        </fieldset>
+      </div>
+    </div>
+     </div>
+
+     <script src="script/login.js"></script>
+</body>
+</html>
