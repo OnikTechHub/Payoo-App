@@ -37,7 +37,7 @@
       }
     </style>
   </head>
-  <body class="min-h-screen max-w-md bg-base-200 py-4 mx-auto">
+  <body class="min-h-screen max-w-md bg-base-200 py-0 mx-auto">
     <header class="border-b-2 border-gray-300 sticky top-0 bg-base-200 z-10">
         <div class="logo w-11/12 mx-auto py-3 flex justify-between items-center">
             <div class="left flex gap-1">
@@ -75,11 +75,11 @@
                 <img src="assets/opt-3.png" alt="">
                 <p>Transfer Money</p>
             </button>
-            <button class="btn flex-col h-full py-4 btn-primary btn-soft">
+            <button onclick="showonly('Bonus')" class="btn flex-col h-full py-4 btn-primary btn-soft">
                 <img src="assets/opt-4.png" alt="">
                 <p>Get Bonus</p>
             </button>
-            <button class="btn flex-col h-full py-4 btn-primary btn-soft">
+            <button onclick="showonly('Bill')" class="btn flex-col h-full py-4 btn-primary btn-soft">
                 <img src="assets/opt-5.png" alt="">
                 <p>Pay Bill</p>
             </button>
@@ -101,14 +101,14 @@
           <label class="label text-neutral font-bold">Select A Bank</label>
           <select id="add-money-bank" class="select w-full rounded-full bg-base-200">
             <option disabled selected>Select bank</option>
-            <option value="DBBL">DBBL</option>0
+            <option value="DBBL">DBBL</option>
             <option value="IBBl">IBBL</option>
             <option value="City Bank">City Bank</option>
           </select>
           <label class="label text-neutral font-bold">Bank Account Number</label>
           <input id="add-money-number" minlength="11" maxlength="11" type="tel" class="input rounded-full bg-base-200 w-full "  placeholder="Enter 11 digit account number" />
           <label class="label text-neutral font-bold">Amount to Add</label>
-          <input id="add-money-amount" type="number" class="input rounded-full bg-base-200 w-full "  placeholder="Add Amount to withdraw" />
+          <input id="add-money-amount" type="number" class="input rounded-full bg-base-200 w-full "  placeholder="Add Amount" />
           <label class="label text-neutral font-bold">Pin Number</label>
           <input id="add-money-pin" minlength="4" maxlength="4" type="password" class="input rounded-full bg-base-200 w-full" placeholder="Enter 4 digit pin number" />
           
@@ -166,10 +166,54 @@
       </div>
     </section>
 
+    <!-- Bonus section  -->
+
+    <section id="Bonus" class="w-11/12 mx-auto py-5 hidden">
+      <h2 class="text-1xl font-bold mb-4">Get Bonus</h2>
+        <div class="card bg-base-100 w-full  shrink-0 shadow rounded-2xl">
+      <div class="card-body  ">
+        <fieldset class="fieldset space-y-2">
+          <label class="label text-neutral font-bold">Enter your coupon</label>
+          <input id="coupon-number" minlength="11" maxlength="11" type="tel" class="input rounded-full bg-base-200 w-full " placeholder="Enter your coupon" />
+          <button id="Bonus-btn" class="btn btn-primary rounded-full">Send Now</button>
+    </section>
+
+    
+    <!-- Pay Bill section  -->
+
+    <section id="Bill" class="w-11/12 mx-auto py-5 hidden ">
+        <h2 class="text-1xl font-bold mb-4">Pay Bill</h2>
+        <div class="card bg-base-100 w-full  shrink-0 shadow rounded-2xl">
+      <div class="card-body  ">
+        <fieldset class="fieldset space-y-2">
+          <label class="label text-neutral font-bold">Select To Pay</label>
+          <select id="Pay-bill" class="select w-full rounded-full bg-base-200">
+            <option disabled selected>Select back</option>
+            <option value="Gas Bill"><img src="assets/opt-1.png" alt="">Gas Bill</option>
+            <option value="Electricity Bill"><img src="assets/opt-1.png" alt="">Electricity Bill</option>
+            <option value="Bank Deposit"><img src="assets/opt-1.png" alt="">Bank Deposit</option>
+            <option value="Mobile Recharge"><img src="assets/opt-1.png" alt="">Mobile Recharge</option>
+          </select>
+          <label class="label text-neutral font-bold">Biller Account Number</label>
+          <input id="pay-bill-number" minlength="11" maxlength="11" type="tel" class="input rounded-full bg-base-200 w-full "  placeholder="Enter account number" />
+          <label class="label text-neutral font-bold">Amount to Pay</label>
+          <input id="Pay-bill-amount" type="number" class="input rounded-full bg-base-200 w-full "  placeholder="Add Amount to Pay" />
+          <label class="label text-neutral font-bold">Pin Number</label>
+          <input id="Pay-bill-pin" minlength="4" maxlength="4" type="password" class="input rounded-full bg-base-200 w-full" placeholder="Enter 4 digit pin number" />
+          
+          <button id="Pay-bill-btn" class="btn btn-primary rounded-full">Send Now</button>
+        </fieldset>
+      </div>
+    </div>
+     </div>
+    </section>
+
 
     <script src="script/machine.js"></script>
     <script src="script/addMony.js"></script>
     <script src="script/cashout.js"></script>
+    <script src="script/bonus.js"></script>
+    <script src="script/PayBill.js"></script>
     <script src="script/transfer.js"></script>
   </body>
 </html>

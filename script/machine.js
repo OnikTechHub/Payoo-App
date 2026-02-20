@@ -28,6 +28,8 @@ function showonly(id){
     const addmony = document.getElementById("add-money");
     const cashout = document.getElementById("cashout");
     const transfer = document.getElementById("transfer")
+    const Bonus = document.getElementById("Bonus")
+    const Bill = document.getElementById("Bill")
     const history = document.getElementById("history")
     
 
@@ -36,6 +38,8 @@ function showonly(id){
     addmony.classList.add("hidden");
     cashout.classList.add("hidden");
     transfer.classList.add("hidden");
+    Bonus.classList.add("hidden");
+    Bill.classList.add("hidden");
     history.classList.add("hidden");
 
     // id wala element ke show korbo

@@ -14,12 +14,7 @@ document.getElementById("add-money-btn").addEventListener("click", function () {
     return;
   }
 
-  //3. get amount
-  const amount = getValueFromInput("add-money-amount");
-  const currentBalance = getBalance();
-  const newBalance = getBalance() + Number(amount);
-
-  if (isNaN(amount) || amount <= 0) {
+   if (isNaN(amount) || amount <= 0) {
     alert("Please enter amount.");
     return;
   }
